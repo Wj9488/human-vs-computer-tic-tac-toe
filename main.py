@@ -25,7 +25,7 @@ def get_empty_cells(board):
     return empty_cells
 
 
-def minimax(board, depth, maximizing):
+def minimax(board, depth, maximising):
     if check_winner(board, "X"):
         return -10 + depth
     if check_winner(board, "O"):
@@ -33,7 +33,7 @@ def minimax(board, depth, maximizing):
     if not get_empty_cells(board):
         return 0
 
-    if maximizing:
+    if maximising:
         max_eval = float('-inf')
         for i, j in get_empty_cells(board):
             board[i][j] = "O"
